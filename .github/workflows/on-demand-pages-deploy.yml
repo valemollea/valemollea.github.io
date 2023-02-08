@@ -34,4 +34,6 @@ jobs:
           publish_dir: ./build
           publish_branch: gh-pages-deploy
           allow_empty_commit: true
-          commit_message: ${{ github.event.inputs.release_notes }}
+          commit_message: |
+            deploy: ${{ github.sha }}
+            ${{ github.event.inputs.release_notes }}
