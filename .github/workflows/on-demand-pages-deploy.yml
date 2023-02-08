@@ -1,8 +1,11 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      release_notes:
+        description: 'Release Notes'
+        required: true
 
 jobs:
   deploy:
@@ -31,3 +34,4 @@ jobs:
           publish_dir: ./build
           publish_branch: gh-pages-deploy
           allow_empty_commit: true
+          commit_message: ${{ github.event.inputs.release_notes }}
