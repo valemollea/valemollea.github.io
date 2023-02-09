@@ -4,6 +4,9 @@
  * TODO: Fix this mess, wtf.
  */
 export const strings = {
-  title: 'Igor & Vale',
+  meta: {
+    title: '{ Igor && Vale }',
+    description: 'Nos casamos!',
+  },
   display_title: '{ Igor && Vale }',
 };
