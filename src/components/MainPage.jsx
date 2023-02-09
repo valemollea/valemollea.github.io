@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Header } from '.';
 
 /**
  * The main container that:
@@ -19,6 +20,6 @@ const Container = styled.div`
 
 export const MainPage = () => (
   <Container>
-    <h1>Hello world!</h1>
+    <Header />
   </Container>
 );

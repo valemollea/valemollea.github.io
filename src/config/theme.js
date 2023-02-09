@@ -9,5 +9,8 @@ export const theme = {
     text: '#2F2F2F',
     primary: '#BA0F30',
     secondary: '#2F2440',
-  }
+  },
+  fonts: {
+    fancy: 'Better Grade',
+  },
 };
