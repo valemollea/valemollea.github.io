@@ -1,11 +1,9 @@
 import styled from 'styled-components';
-import { Header } from '.';
+import { Header } from './Header.jsx';
 
 /**
  * The main container that:
- * - takes the whole height and width
- * - sets the theme colors for text and background
- * - centers the content both horizontally and vertically
+ * - centers the content horizontally
  */
 const Container = styled.div`
   padding-top: 5em;
