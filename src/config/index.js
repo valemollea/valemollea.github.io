@@ -1,11 +1,4 @@
-import { config } from './config.js';
-import { theme } from './theme.js';
-import { strings } from './strings.js';
-import { GlobalStyle } from './style.js';
-
-export {
-  config,
-  theme,
-  strings,
-  GlobalStyle
-};
+export { config } from './config.js';
+export { theme } from './theme.js';
+export { strings } from './strings.js';
+export { GlobalStyle } from './style.js';

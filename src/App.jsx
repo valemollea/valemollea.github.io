@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
-import { theme, strings, GlobalStyle } from './../config';
-import { MainPage } from './MainPage.jsx';
+import { theme, strings, GlobalStyle } from './config';
+import { MainPage } from './components/MainPage.jsx';
 import useMetaTags from 'react-metatags-hook';
 
 
