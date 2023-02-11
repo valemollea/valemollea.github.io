@@ -8,14 +8,9 @@ import { Header } from '.';
  * - centers the content both horizontally and vertically
  */
 const Container = styled.div`
-  height: 100vh;
-  width: 100vw;
-  margin: 0px;
-  color: ${({theme}) => theme.colors.white};
-  background-color: ${({theme}) => theme.colors.secondary};
+  padding-top: 5em;
   display: flex;
   justify-content: center;
-  align-items: center;
 `;
 
 export const MainPage = () => (

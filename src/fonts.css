@@ -1,0 +1,9 @@
+
+/**
+ * Better Grade Font.
+ * A font that simulates handwritten cursive text.
+ */
+@font-face {
+  font-family: 'Better Grade';
+  src: local('Better Grade'), url(./assets/fonts/Better Grade.ttf) format('truetype')
+}
