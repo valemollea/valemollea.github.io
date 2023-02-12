@@ -8,3 +8,12 @@
   src: local('Better Grade'),
     url(./../assets/fonts/Better Grade.ttf) format('truetype')
 }
+
+/**
+ * PTRegular.
+ */
+@font-face {
+  font-family: 'PTRegular';
+  src: local('PTRegular'),
+    url(./../assets/fonts/PTRegular.ttf) format('truetype')
+}

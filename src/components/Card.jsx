@@ -1,25 +1,30 @@
 import styled from 'styled-components';
 import { theme } from './../config';
-import icon from './../assets/icons/vinyl.svg';
+import { Icon } from './../utils/Icon.js';
 
 const Container = styled.div`
   background-color: ${theme.colors.primary};
-  padding: 20px;
-  border-radius: 20px;
+  padding: 1rem;
+  border-radius: 1rem;
 
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
 `;
 
-const Icon = styled.img`
-  height: 2rem;
+const IconImage = styled.img`
+  height: 3rem;
 `;
+
+const Title = styled.h2`
+  font-family: 'PTRegular';
+  font-size: 1.3rem;
+  text-align: center;
+`
 
 
 export const Card = (props) => (
   <Container>
-    <Icon src={icon} alt={"hello"} />
-    <h2>{ props.title }</h2>
+    <IconImage src={ Icon[props.card.icon] } alt={ props.card.name } />
+    <Title>{ props.card.title }</Title>
   </Container>
 );
