@@ -5,14 +5,12 @@ import { cards } from './../config';
 
 const Container = styled.div`
   padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   display: grid;
   grid-gap: 1rem;
   grid-auto-rows: 1fr;
-
-  @media (min-width: 600px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   @media (min-width: 600px) {
     grid-template-columns: repeat(3, 1fr);

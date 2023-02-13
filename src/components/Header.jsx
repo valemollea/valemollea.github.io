@@ -18,7 +18,14 @@ const RoundImageContainer = styled.div`
 
 const Title = styled.h1`
   font-family: ${theme.fonts.fancy};
-  font-size: 4em;
+  font-size: 5rem;
+  padding: 1rem;
+  text-align: center;
+  white-space: nowrap;
+
+  @media (max-width: 320px) {
+    font-size: 3rem;
+  }
 `;
 
 export const Header = () => (
