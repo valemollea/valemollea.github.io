@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Card } from './Card.jsx';
 import { cards } from './../config';
 
-
 const Container = styled.div`
   padding-bottom: 1rem;
 
@@ -20,13 +19,10 @@ const Container = styled.div`
   }
 `;
 
-
 export const CardGroup = () => (
   <Container>
-    {
-      cards.map((card) => (
-        <Card card={ card } />
-      ))
-    }
+    {cards.map((card) => (
+      <Card card={card} />
+    ))}
   </Container>
 );

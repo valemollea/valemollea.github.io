@@ -3,7 +3,7 @@ import facheritos from './../assets/images/facheritos.png';
 import { theme, strings } from '../config';
 
 const RoundImage = styled.div`
-  background-image: ${props => `url(${props.src})`};
+  background-image: ${(props) => `url(${props.src})`};
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -20,7 +20,6 @@ const Title = styled.h1`
   font-family: ${theme.fonts.fancy};
   font-size: 4em;
 `;
-
 
 export const Header = () => (
   <div>

@@ -1,4 +1,3 @@
-
 /**
  * Better Grade Font.
  * A font that simulates handwritten cursive text.
@@ -6,7 +5,7 @@
 @font-face {
   font-family: 'Better Grade';
   src: local('Better Grade'),
-    url(./../assets/fonts/Better Grade.ttf) format('truetype')
+    url(./../assets/fonts/Better Grade.ttf) format('truetype');
 }
 
 /**
@@ -15,5 +14,5 @@
 @font-face {
   font-family: 'PTRegular';
   src: local('PTRegular'),
-    url(./../assets/fonts/PTRegular.ttf) format('truetype')
+    url(./../assets/fonts/PTRegular.ttf) format('truetype');
 }

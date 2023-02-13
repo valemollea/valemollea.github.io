@@ -1,4 +1,3 @@
-
 /**
  * Contains config to be used across the site.
  */

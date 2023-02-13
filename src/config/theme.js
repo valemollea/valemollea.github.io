@@ -1,4 +1,3 @@
-
 /**
  * Contains config related to the site style.
  */
