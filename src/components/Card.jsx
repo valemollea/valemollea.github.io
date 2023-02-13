@@ -17,7 +17,7 @@ const IconImage = styled.img`
 
 const Title = styled.h2`
   font-family: 'PTRegular';
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-align: center;
 `
 

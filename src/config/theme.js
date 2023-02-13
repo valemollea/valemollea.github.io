@@ -7,7 +7,7 @@ export const theme = {
     black: '#000000',
     white: '#FFFFFF',
     text: '#2F2F2F',
-    primary: '#BA0F30',
+    primary: '#9F0000',
     secondary: '#2F2440',
   },
   fonts: {
