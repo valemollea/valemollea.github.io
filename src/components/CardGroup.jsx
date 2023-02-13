@@ -3,13 +3,21 @@ import styled from 'styled-components';
 import { Card } from './Card.jsx';
 import { cards } from './../config';
 
-// TODO: Responsive
 
 const Container = styled.div`
+  padding-bottom: 1rem;
+
   display: grid;
-  grid-template-columns: repeat(3, 15rem);
   grid-gap: 1rem;
   grid-auto-rows: 1fr;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 

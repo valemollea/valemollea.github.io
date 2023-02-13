@@ -2,10 +2,12 @@ import styled from 'styled-components';
 import { theme } from './../config';
 import { Icon } from './../utils/Icon.js';
 
+
 const Container = styled.div`
   background-color: ${theme.colors.primary};
   padding: 1rem;
   border-radius: 1rem;
+  max-width: 10rem;
 
   display: flex;
   flex-direction: column;
