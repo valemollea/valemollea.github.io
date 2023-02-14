@@ -10,6 +10,8 @@ const Container = styled.div`
 
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const IconImage = styled.img`
@@ -17,9 +19,10 @@ const IconImage = styled.img`
 `;
 
 const Title = styled.h2`
-  font-family: 'PTRegular';
+  font-family: ${theme.fonts.nerd};
   font-size: 1rem;
   text-align: center;
+  margin-bottom: 0;
 `;
 
 export const Card = (props) => (

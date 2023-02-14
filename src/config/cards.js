@@ -1,32 +1,32 @@
 export const cards = [
   {
     name: 'date',
-    title: 'Cuándo?',
+    title: '{ cuándo }',
     icon: 'date',
   },
   {
     name: 'location',
-    title: 'Dónde?',
+    title: '{ dónde }',
     icon: 'location',
   },
   {
     name: 'transport',
-    title: 'Cómo llegar?',
+    title: '{ tranporte }',
     icon: 'car',
   },
   {
     name: 'music',
-    title: 'Qué música no puede faltar?',
+    title: '{ música }',
     icon: 'vinyl',
   },
   {
     name: 'gift',
-    title: 'Qué puedo regalar?',
+    title: '{ regalo }',
     icon: 'gift',
   },
   {
     name: 'dress_code',
-    title: 'Cómo tengo que ir?',
+    title: '{ facha }',
     icon: 'tuxedo',
   },
 ];

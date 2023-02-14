@@ -17,14 +17,14 @@ const RoundImageContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: ${theme.fonts.fancy};
-  font-size: 5rem;
+  font-family: ${theme.fonts.nerd};
+  font-size: 2rem;
   padding: 1rem;
   text-align: center;
   white-space: nowrap;
 
-  @media (max-width: 320px) {
-    font-size: 3rem;
+  @media (max-width: 360px) {
+    font-size: 1.3rem;
   }
 `;
 

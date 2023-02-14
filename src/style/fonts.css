@@ -16,3 +16,12 @@
   src: local('PTRegular'),
     url(./../assets/fonts/PTRegular.ttf) format('truetype');
 }
+
+/**
+ * SourceCodePro.
+ */
+@font-face {
+  font-family: 'SourceCodePro';
+  src: local('SourceCodePro'),
+    url(./../assets/fonts/SourceCodePro.ttf) format('truetype');
+}
