@@ -14,7 +14,7 @@ export const cards = [
   {
     id: 3,
     name: 'transport',
-    title: '{ tranporte }',
+    title: '{ transporte }',
     icon: 'car',
   },
   {
