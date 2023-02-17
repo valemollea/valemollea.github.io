@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { theme } from './../config';
 import { Icon } from './../utils/Icon.js';
@@ -25,9 +26,11 @@ const Title = styled.h2`
   margin-bottom: 0;
 `;
 
-export const Card = (props) => (
-  <Container>
-    <IconImage src={Icon[props.card.icon]} alt={props.card.name} />
-    <Title>{props.card.title}</Title>
+const RawCard = ({icon, name, title, ...props}, ref) => (
+  <Container ref={ref}>
+    <IconImage src={Icon[icon]} alt={name} />
+    <Title>{title}</Title>
   </Container>
 );
+
+export const Card = React.forwardRef(RawCard);

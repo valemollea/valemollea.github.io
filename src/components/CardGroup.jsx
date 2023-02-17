@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { Card } from './Card.jsx';
 import { cards } from './../config';
 
@@ -17,10 +18,15 @@ const Container = styled.div`
   }
 `;
 
+const MotionCard = motion(Card, { forwardMotionProps: true });
+
 export const CardGroup = () => (
   <Container>
     {cards.map((card) => (
-      <Card card={card} />
+      <MotionCard
+        key={card.name}
+        {...card}
+      />
     ))}
   </Container>
 );
