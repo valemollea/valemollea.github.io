@@ -4,15 +4,28 @@ import { theme } from './../config';
 import { Icon } from './../utils/Icon.js';
 
 const Container = styled.div`
-  background-color: ${theme.colors.primary};
-  padding: 1rem;
-  border-radius: 1rem;
-  max-width: 10rem;
-
   display: flex;
   flex-direction: column;
+
+  padding: 1rem;
+  background-color: ${theme.colors.primary};
+
+  border-style: solid;
+  border-color: ${theme.colors.secondary};
+  border-radius: 1rem;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
   align-items: center;
   justify-content: center;
+
+  max-height: 60%;
+  max-width: 40%;
 `;
 
 const IconImage = styled.img`
@@ -26,11 +39,11 @@ const Title = styled.h2`
   margin-bottom: 0;
 `;
 
-const RawCard = ({ icon, name, title, ...props }, ref) => (
+const RawCardDetails = ({ icon, name, title, ...props }, ref) => (
   <Container ref={ref} {...props}>
     <IconImage src={Icon[icon]} alt={name} />
     <Title>{title}</Title>
   </Container>
 );
 
-export const Card = React.forwardRef(RawCard);
+export const CardDetails = React.forwardRef(RawCardDetails);
