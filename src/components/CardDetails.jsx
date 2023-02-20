@@ -10,9 +10,13 @@ const Container = styled.div`
   padding: 1rem;
   background-color: ${theme.colors.primary};
 
+  // TODO: Add shadow
   border-style: solid;
   border-color: ${theme.colors.secondary};
   border-radius: 1rem;
+
+  align-items: center;
+  justify-content: center;
 
   position: fixed;
   top: 0;
@@ -20,9 +24,6 @@ const Container = styled.div`
   left: 0;
   right: 0;
   margin: auto;
-
-  align-items: center;
-  justify-content: center;
 
   max-height: 60%;
   max-width: 40%;

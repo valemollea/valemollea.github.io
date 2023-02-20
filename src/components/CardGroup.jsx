@@ -4,18 +4,21 @@ import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from './Card.jsx';
 import { CardDetails } from './CardDetails.jsx';
-import { cards } from './../config';
+import { cards, theme } from './../config';
 
 const Container = styled.div`
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1rem;
+  padding-top: 0;
 
   display: grid;
   grid-gap: 1rem;
   grid-auto-rows: 1fr;
 
-  @media (min-width: 600px) {
+  @media (min-width: ${theme.breakpoints.small_phone}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: ${theme.breakpoints.regular_phone}) {
     grid-template-columns: repeat(3, 1fr);
   }
 `;
