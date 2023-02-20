@@ -1,7 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { theme } from './../config';
 import { Icon } from './../utils/Icon.js';
+
+const Backdrop = styled(motion.div).attrs({
+  initial: { opacity: 0 },
+  animate: { opacity: 0.3 },
+  exit: { opacity: 0 },
+})`
+  background-color: ${theme.colors.black};
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -41,10 +55,13 @@ const Title = styled.h2`
 `;
 
 const RawCardDetails = ({ icon, name, title, ...props }, ref) => (
-  <Container ref={ref} {...props}>
-    <IconImage src={Icon[icon]} alt={name} />
-    <Title>{title}</Title>
-  </Container>
+  <>
+    <Backdrop />
+    <Container ref={ref} {...props}>
+      <IconImage src={Icon[icon]} alt={name} />
+      <Title>{title}</Title>
+    </Container>
+  </>
 );
 
 export const CardDetails = React.forwardRef(RawCardDetails);
