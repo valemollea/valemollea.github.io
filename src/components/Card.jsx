@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { theme } from './../config';
 import { Icon } from './../utils/Icon.js';
 
+// The card item container.
 const Container = styled.div`
   background-color: ${theme.colors.primary};
   padding: 1rem;
@@ -15,6 +16,7 @@ const Container = styled.div`
   justify-content: center;
 `;
 
+// The icon of the card item.
 const IconImage = styled.img`
   height: 3rem;
 
@@ -24,6 +26,7 @@ const IconImage = styled.img`
   }
 `;
 
+// The title of the card item.
 const Title = styled.h2`
   font-family: ${theme.fonts.nerd};
   font-size: 1rem;
@@ -36,6 +39,11 @@ const Title = styled.h2`
   }
 `;
 
+/**
+ * Card component.
+ * Displays the basic information of an info card.
+ * The main purpose is to be displayed in the Card Group.
+ */
 const RawCard = ({ icon, name, title, ...props }, ref) => (
   <Container ref={ref} {...props}>
     <IconImage src={Icon[icon]} alt={name} />

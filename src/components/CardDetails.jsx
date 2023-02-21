@@ -3,30 +3,17 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { theme } from './../config';
 import { Icon } from './../utils/Icon.js';
+import { Backdrop } from './Backdrop.jsx';
 
-const Backdrop = styled(motion.div).attrs({
-  initial: { opacity: 0 },
-  animate: { opacity: 0.3 },
-  exit: { opacity: 0 },
-})`
-  background-color: ${theme.colors.black};
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-`;
-
+// The card details container.
+// Gets displayed in the center of the screen
+// and its size depends on the type of screen.
 const Container = styled.div`
   display: flex;
   flex-direction: column;
 
   padding: 1rem;
   background-color: ${theme.colors.primary};
-
-  // TODO: Add shadow
-  border-style: solid;
-  border-color: ${theme.colors.secondary};
   border-radius: 1rem;
 
   align-items: center;
@@ -54,6 +41,11 @@ const Title = styled.h2`
   margin-bottom: 0;
 `;
 
+/**
+ * Card Details Component.
+ * Displays `all` information of an info card.
+ * Meant to be displayed when a card is selected from the grid.
+ */
 const RawCardDetails = ({ icon, name, title, ...props }, ref) => (
   <>
     <Backdrop />

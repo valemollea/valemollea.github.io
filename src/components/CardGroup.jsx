@@ -6,6 +6,8 @@ import { Card } from './Card.jsx';
 import { CardDetails } from './CardDetails.jsx';
 import { cards, theme } from './../config';
 
+// Card group container.
+// Displays the cards in a grid manner.
 const Container = styled.div`
   padding: 1rem;
   padding-top: 0;
@@ -23,9 +25,18 @@ const Container = styled.div`
   }
 `;
 
+// Forwards `motion` functionality to the card.
 const MotionCard = motion(Card, { forwardMotionProps: true });
+
+// Forwards `motion` functionality to the card detail component.
 const MotionCardDetails = motion(CardDetails, { forwardMotionProps: true });
 
+/**
+ * Card Group Component.
+ * Displays the list of cards in a grid manner to
+ * provide the user with quick info about every card.
+ * Cards should be selectable to provide more info about the card.
+ */
 export const CardGroup = () => {
   const [selected, setSelected] = useState(null);
 
