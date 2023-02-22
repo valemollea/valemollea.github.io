@@ -13,7 +13,10 @@ export const theme = {
     fancy: 'Better Grade',
     nerd: 'SourceCodePro',
   },
-  font_size: {},
+  font_size: {
+    small: 'clamp(0.9em, 2vw, 1.2em)',
+    large: 'clamp(1rem, 5vw, 3rem)',
+  },
   spacing: {
     none: '0',
     small: '1rem',

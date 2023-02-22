@@ -12,6 +12,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
 `;
 
 // The icon of the card item.
@@ -21,9 +23,9 @@ const IconImage = styled.img`
 
 // The title of the card item.
 const Title = styled.h2`
-  font-family: ${theme.font.nerd};
-  font-size: clamp(0.9rem, 1.9vw, 1rem);
   text-align: center;
+  font-family: ${theme.font.nerd};
+  font-size: ${theme.font_size.small};
   margin-bottom: ${theme.spacing.none};
 `;
 

@@ -24,7 +24,7 @@ const RoundImageContainer = styled.div`
 // The header main title.
 const Title = styled.h1`
   font-family: ${theme.font.nerd};
-  font-size: clamp(1rem, 5vw, 3rem);
+  font-size: ${theme.font_size.large};
   padding: ${theme.spacing.small};
   text-align: center;
 `;
