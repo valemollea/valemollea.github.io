@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { Header } from './Header.jsx';
 import { CardGroup } from './CardGroup.jsx';
+import { theme } from '../config';
 
 // The main page container.
 const Container = styled.div`
-  padding-top: 5em;
+  padding-top: ${theme.spacing.large};
   display: flex;
   flex-direction: column;
   align-items: center;

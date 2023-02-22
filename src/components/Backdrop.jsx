@@ -9,7 +9,7 @@ export const Backdrop = styled(motion.div).attrs({
   animate: { opacity: 0.4 },
   exit: { opacity: 0 },
 })`
-  background-color: ${theme.colors.black};
+  background-color: ${theme.color.black};
   position: fixed;
   top: 0;
   left: 0;

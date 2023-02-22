@@ -5,9 +5,9 @@ import { Icon } from './../utils/Icon.js';
 
 // The card item container.
 const Container = styled.div`
-  background-color: ${theme.colors.primary};
-  padding: 1rem;
-  border-radius: 1rem;
+  background-color: ${theme.color.primary};
+  padding: ${theme.spacing.small};
+  border-radius: ${theme.border_radius.small};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,15 +16,15 @@ const Container = styled.div`
 
 // The icon of the card item.
 const IconImage = styled.img`
-  height: 3rem;
+  height: ${theme.size.medium};
 `;
 
 // The title of the card item.
 const Title = styled.h2`
-  font-family: ${theme.fonts.nerd};
+  font-family: ${theme.font.nerd};
   font-size: clamp(0.9rem, 1.9vw, 1rem);
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: ${theme.spacing.none};
 `;
 
 /**

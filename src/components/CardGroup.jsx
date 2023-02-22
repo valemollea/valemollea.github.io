@@ -10,10 +10,10 @@ import { cards, theme } from './../config';
 // Displays the cards in a grid manner.
 const Container = styled.div`
   display: grid;
-  gap: 1rem;
+  gap: ${theme.spacing.small};
+  padding-bottom: ${theme.spacing.small};
   grid-auto-rows: minmax(max-content, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-  padding-bottom: 1rem;
 `;
 
 // Forwards `motion` functionality to the card.

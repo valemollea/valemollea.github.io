@@ -11,33 +11,33 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: 1rem;
-  background-color: ${theme.colors.primary};
-  border-radius: 1rem;
+  padding: ${theme.spacing.small};
+  background-color: ${theme.color.primary};
+  border-radius: ${theme.border_radius.small};
 
   align-items: center;
   justify-content: center;
 
   position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: ${theme.spacing.none};
+  bottom: ${theme.spacing.none};
+  left: ${theme.spacing.none};
+  right: ${theme.spacing.none};
   margin: auto;
 
-  max-height: 60%;
+  max-height: clamp(60%, 5vmin, 80vmax);
   max-width: 40%;
 `;
 
 const IconImage = styled.img`
-  height: 3rem;
+  height: ${theme.size.medium};
 `;
 
 const Title = styled.h2`
-  font-family: ${theme.fonts.nerd};
+  font-family: ${theme.font.nerd};
   font-size: 1rem;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: ${theme.spacing.none};
 `;
 
 /**
