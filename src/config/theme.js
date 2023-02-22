@@ -33,6 +33,7 @@ export const theme = {
     small: '1rem',
     medium: '3rem',
     large: '10rem',
+    extraLarge: '400px',
   },
 };
 

@@ -19,14 +19,13 @@ const Container = styled.div`
   justify-content: center;
 
   position: fixed;
-  top: ${theme.spacing.none};
-  bottom: ${theme.spacing.none};
-  left: ${theme.spacing.none};
-  right: ${theme.spacing.none};
+  inset: ${theme.spacing.none};
   margin: auto;
 
-  max-height: clamp(60%, 5vmin, 80vmax);
-  max-width: 40%;
+  max-height: ${theme.size.extraLarge};
+  max-width: ${theme.size.extraLarge};
+  height: 80vh;
+  width: 75vw;
 `;
 
 const IconImage = styled.img`
