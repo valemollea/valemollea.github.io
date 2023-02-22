@@ -8,8 +8,6 @@ const Container = styled.div`
   background-color: ${theme.colors.primary};
   padding: 1rem;
   border-radius: 1rem;
-  max-width: 10rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,24 +17,14 @@ const Container = styled.div`
 // The icon of the card item.
 const IconImage = styled.img`
   height: 3rem;
-
-  @media (min-width: ${theme.breakpoints.small_phone}) and
-         (max-width: ${theme.breakpoints.regular_phone}) {
-    height: 2rem;
-  }
 `;
 
 // The title of the card item.
 const Title = styled.h2`
   font-family: ${theme.fonts.nerd};
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.9vw, 1rem);
   text-align: center;
   margin-bottom: 0;
-
-  @media (min-width: ${theme.breakpoints.small_phone}) and
-         (max-width: ${theme.breakpoints.regular_phone}) {
-    font-size: 0.6rem;
-  }
 `;
 
 /**

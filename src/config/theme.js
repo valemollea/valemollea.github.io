@@ -13,9 +13,12 @@ export const theme = {
     fancy: 'Better Grade',
     nerd: 'SourceCodePro',
   },
-  breakpoints: {
-    small_phone: '300px',
-    regular_phone: '500px',
-    tablet_or_desktop: '1000px',
-  },
 };
+
+/**
+ * TODO:
+ * - Font sizes
+ * - Generic sizes (card size etc)
+ * - Spacings and gaps
+ * - Border radius
+ */

@@ -9,20 +9,11 @@ import { cards, theme } from './../config';
 // Card group container.
 // Displays the cards in a grid manner.
 const Container = styled.div`
-  padding: 1rem;
-  padding-top: 0;
-
   display: grid;
-  grid-gap: 1rem;
-  grid-auto-rows: 1fr;
-
-  @media (min-width: ${theme.breakpoints.small_phone}) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: ${theme.breakpoints.regular_phone}) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  gap: 1rem;
+  grid-auto-rows: minmax(max-content, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  padding-bottom: 1rem;
 `;
 
 // Forwards `motion` functionality to the card.

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import { theme } from './../config';
 import { Icon } from './../utils/Icon.js';
 import { Backdrop } from './Backdrop.jsx';

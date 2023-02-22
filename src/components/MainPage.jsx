@@ -10,13 +10,21 @@ const Container = styled.div`
   align-items: center;
 `;
 
+// The main page content container.
+const ContentContainer = styled.div`
+  justify-content: center;
+  align-items: center;
+`;
+
 /**
  * Main Page.
  * Organizes the components to be displayed in the page.
  */
 export const MainPage = () => (
   <Container>
-    <Header />
-    <CardGroup />
+    <ContentContainer>
+      <Header />
+      <CardGroup />
+    </ContentContainer>
   </Container>
 );
