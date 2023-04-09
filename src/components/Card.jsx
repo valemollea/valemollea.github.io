@@ -14,6 +14,7 @@ const Container = styled.div`
   justify-content: center;
   white-space: nowrap;
   overflow: hidden;
+  cursor: pointer;
 `;
 
 // The icon of the card item.

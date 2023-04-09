@@ -7,6 +7,7 @@ import { theme } from '../config';
 // The main page container.
 const Container = styled.div`
   padding-top: ${theme.spacing.large};
+  padding-bottom: ${theme.spacing.large};
   display: flex;
   flex-direction: column;
   align-items: center;

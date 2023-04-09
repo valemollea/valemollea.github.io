@@ -3,5 +3,10 @@
     "title": "{ Igor && Vale }",
     "description": "Nos casamos!"
   },
-  "display_title": "{ Igor && Vale }"
+  "display_title": "{ Igor && Vale }",
+  "confirmation_button": {
+    "icon": "confirm",
+    "name": "Confirmation Button",
+    "title": "{ confirmá tu asistencia }"
+  }
 }
