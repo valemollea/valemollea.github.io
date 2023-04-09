@@ -3,36 +3,50 @@
     "id": 1,
     "name": "date",
     "title": "{ cuándo }",
+    "description": "Los esperamos el 23 de Septiembre del 2023 a las 20hs.",
+    "link": {
+      "href": "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=cnYwNWNrMXR0b2lrZDgybTU1dTduNDFiMzAgdmFsZS5tb2xsZWFAbQ&tmsrc=vale.mollea%40gmail.com",
+      "text": "Save the date!"
+    },
     "icon": "date"
   },
   {
     "id": 2,
     "name": "location",
     "title": "{ dónde }",
+    "description": "En el Salón Villegas, Av. San Martín 3729, Río Ceballos, Córdoba",
+    "link": {
+      "href": "https://goo.gl/maps/uCnxosiVgoQf1PkM7",
+      "text": "Hace click acá para ver la ubicación"
+    },
     "icon": "location"
   },
   {
     "id": 3,
     "name": "transport",
     "title": "{ traslado }",
+    "description": "",
     "icon": "car"
   },
   {
     "id": 4,
     "name": "music",
     "title": "{ música }",
+    "description": "",
     "icon": "vinyl"
   },
   {
     "id": 5,
     "name": "gift",
     "title": "{ regalo }",
+    "description": "",
     "icon": "gift"
   },
   {
     "id": 6,
     "name": "dress_code",
     "title": "{ facha }",
+    "description": "",
     "icon": "tuxedo"
   }
 ]

@@ -1,4 +1,4 @@
-import React from 'react';
+import { forwardRef } from 'react';
 import styled from 'styled-components';
 import { theme } from './../config';
 import { Icon } from './../utils/Icon.js';
@@ -29,19 +29,31 @@ const Title = styled.h2`
   margin-bottom: ${theme.spacing.none};
 `;
 
+const Description = styled.div`
+  padding: 1rem 2rem;
+  text-align: center;
+  line-height: 1.75rem;
+`;
+
+const Link = styled.a`
+  color: ${({theme}) => theme.color.secondary};
+`;
+
 /**
  * Card Details Component.
  * Displays `all` information of an info card.
  * Meant to be displayed when a card is selected from the grid.
  */
-const RawCardDetails = ({ icon, name, title, ...props }, ref) => (
+export const CardDetails = forwardRef(({ icon, name, title, description, link, onClick, ...props }, ref) => (
   <>
-    <Backdrop />
+    <Backdrop onClick={onClick} />
     <Container ref={ref} {...props}>
       <IconImage src={Icon[icon]} alt={name} />
       <Title>{title}</Title>
+      <Description>{description}</Description>
+      {link && (
+        <Link href={link.href}>{link.text}</Link>
+      )}
     </Container>
   </>
-);
-
-export const CardDetails = React.forwardRef(RawCardDetails);
+));
