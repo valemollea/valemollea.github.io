@@ -1,5 +1,5 @@
-export { config } from './config.js';
-export { theme } from './theme.js';
-export { strings } from './strings.js';
 export { GlobalStyle } from './style.js';
-export { cards } from './cards.js';
+export { default as config } from './config.json';
+export { default as theme } from './theme.json';
+export { default as content } from './content.json';
+export { default as cards } from './cards.json';

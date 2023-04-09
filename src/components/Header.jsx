@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import facheritos from './../assets/images/facheritos.png';
-import { theme, strings } from '../config';
+import { theme, content } from '../config';
 
 // The header container.
 const Container = styled.div``;
@@ -38,6 +38,6 @@ export const Header = () => (
     <RoundImageContainer>
       <RoundImage src={facheritos} />
     </RoundImageContainer>
-    <Title>{strings.display_title}</Title>
+    <Title>{content.display_title}</Title>
   </Container>
 );

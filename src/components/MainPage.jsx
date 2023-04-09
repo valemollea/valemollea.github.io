@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Header } from './Header.jsx';
 import { CardGroup } from './CardGroup.jsx';
+import { ConfirmationButton } from './ConfirmationButton.jsx';
 import { theme } from '../config';
 
 // The main page container.
@@ -26,6 +27,7 @@ export const MainPage = () => (
     <ContentContainer>
       <Header />
       <CardGroup />
+      <ConfirmationButton />
     </ContentContainer>
   </Container>
 );
