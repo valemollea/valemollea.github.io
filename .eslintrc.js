@@ -1,0 +1,45 @@
+const rules = {
+  'max-len': ['error', 100, 2, { ignoreUrls: true }],
+  'no-console': [0],
+  'no-restricted-syntax': 'off',
+  'no-continue': 'off',
+  'no-underscore-dangle': 'off',
+  'import/extensions': 'off',
+  'import/no-unresolved': 'off',
+  'operator-linebreak': 'off',
+  'implicit-arrow-linebreak': 'off',
+  'import/prefer-default-export': 'off',
+  'react/react-in-jsx-scope': 'off',
+  'react/destructuring-assignment': 'off',
+  'no-debugger': 'off',
+  'no-alert': 'off',
+  'jsx-a11y/click-events-have-key-events': 'off',
+  'jsx-a11y/no-static-element-interactions': 'off',
+  'react/jsx-one-expression-per-line': 'off',
+  'react/jsx-props-no-spreading': 'off',
+  'react/display-name': 'off',
+  '@next/next/no-img-element': 'off',
+  camelcase: 0,
+  'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx'] }],
+  'lines-between-class-members': [
+    'error',
+    'always',
+    { exceptAfterSingleLine: true },
+  ],
+  'no-undef': 'off',
+  'no-shadow': 'off',
+  'no-use-before-define': 'off',
+};
+
+module.exports = {
+  parserOptions: {
+    sourceType: 'module',
+    ecmaVersion: 2020,
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+  ],
+  rules,
+};

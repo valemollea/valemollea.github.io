@@ -1,11 +1,12 @@
 import { forwardRef } from 'react';
+import { PropTypes } from 'prop-types';
 import styled from 'styled-components';
-import { theme } from './../config';
-import { Icon } from './../utils/Icon.js';
+import { CardHeader } from './CardHeader';
+import { theme } from '../../config';
 
 // The card item container.
 const Container = styled.div`
-  background-color: ${theme.color.primary};
+  background-color: ${theme.color.primary.main};
   padding: ${theme.spacing.small};
   border-radius: ${theme.border_radius.small};
   display: flex;
@@ -15,19 +16,7 @@ const Container = styled.div`
   white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
-`;
-
-// The icon of the card item.
-const IconImage = styled.img`
-  height: ${theme.size.medium};
-`;
-
-// The title of the card item.
-const Title = styled.h2`
-  text-align: center;
-  font-family: ${theme.font.nerd};
-  font-size: ${theme.font_size.small};
-  margin-bottom: ${theme.spacing.none};
+  box-shadow: '0 0 16px 1px rgba(0,0,0,0.25), 0 2px 4px 0 rgba(0,0,0,0.1)';
 `;
 
 /**
@@ -37,7 +26,12 @@ const Title = styled.h2`
  */
 export const Card = forwardRef(({ icon, name, title, ...props }, ref) => (
   <Container ref={ref} {...props}>
-    <IconImage src={Icon[icon]} alt={name} />
-    <Title>{title}</Title>
+    <CardHeader icon={icon} name={name} title={title} />
   </Container>
 ));
+
+Card.propTypes = {
+  icon: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};

@@ -1,9 +1,8 @@
-import React from 'react';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Card } from './Card.jsx';
-import { CardDetails } from './CardDetails.jsx';
+import { Card } from './Card';
+import { CardDetails } from './CardDetails';
 import { cards, theme } from './../config';
 
 // Card group container.
@@ -33,16 +32,15 @@ export const CardGroup = () => {
 
   return (
     <Container>
-      {cards.map((card) => (
-        <MotionCard
-          key={card.name}
-          layoutId={card.id}
-          onClick={() => setSelected(card)}
-          {...card}
-        />
-      ))}
-
       <AnimatePresence>
+        {cards.map((card) => (
+          <MotionCard
+            key={card.name}
+            layoutId={card.id}
+            onClick={() => setSelected(card)}
+            {...card}
+          />
+        ))}
         {selected && (
           <MotionCardDetails
             key={selected.name}

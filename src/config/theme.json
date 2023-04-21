@@ -3,11 +3,15 @@
     "black": "#000000",
     "white": "#FFFFFF",
     "text": "#2F2F2F",
-    "primary": "#6d8a84ff",
+    "primary": {
+      "main": "#6d8a84ff",
+      "light": "#a1b9b5ff",
+      "dark": "#3c4e4b"
+    },
     "secondary": "#2F2440"
   },
   "font": {
-    "fancy": "Better Grade",
+    "fancy": "Sanchez",
     "nerd": "SourceCodePro"
   },
   "font_size": {

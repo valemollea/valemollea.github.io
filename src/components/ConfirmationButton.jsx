@@ -1,7 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
-import { theme, content } from './../config';
-import { Card } from './Card.jsx';
+import { content } from './../config';
+import { Card } from './Card/Card.jsx';
 
 /**
  * Confirmation Button component.
