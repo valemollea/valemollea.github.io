@@ -6,9 +6,9 @@ import { theme } from './../config';
 export const PopUpContainer = styled.div`
   position: fixed;
   inset: ${theme.spacing.none};
+  padding: ${theme.spacing.medium};
   margin: auto;
-  max-height: ${theme.size.extraLarge};
   max-width: ${theme.size.extraLarge};
-  height: 80vh;
+  height: fit-content;
   width: 75vw;
 `;

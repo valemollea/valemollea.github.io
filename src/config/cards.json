@@ -25,28 +25,40 @@
     "id": 3,
     "name": "transport",
     "title": "{ traslado }",
-    "description": "",
+    "description": "En Salón Villegas, Av. San Martín 3729, Río Ceballos, Córdoba",
+    "link": {
+      "href": "https://goo.gl/maps/uCnxosiVgoQf1PkM7",
+      "text": "Hace click acá para ver la ubicación"
+    },
     "icon": "car"
   },
   {
     "id": 4,
     "name": "music",
     "title": "{ música }",
-    "description": "",
+    "description": "Queremos que bailes toda la noche! por eso la música es muy importante.",
+    "link": {
+      "href": "https://music.youtube.com/playlist?list=PLStPar22ClQspU5pXOJurP2N20BMReh3q&jct=7UPDNm1sRzw0hxRgiporzS0QUb-n-g",
+      "text": "Agrega las canciones que no pueden faltar!"
+    },
     "icon": "vinyl"
   },
   {
     "id": 5,
     "name": "gift",
     "title": "{ regalo }",
-    "description": "",
+    "description": "En Salón Villegas, Av. San Martín 3729, Río Ceballos, Córdoba",
+    "link": {
+      "href": "https://goo.gl/maps/uCnxosiVgoQf1PkM7",
+      "text": "Hace click acá para ver la ubicación"
+    },
     "icon": "gift"
   },
   {
     "id": 6,
     "name": "dress_code",
     "title": "{ facha }",
-    "description": "",
+    "description": "Idealmente elegante sport (?",
     "icon": "tuxedo"
   }
 ]

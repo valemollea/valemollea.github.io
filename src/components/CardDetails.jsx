@@ -6,6 +6,7 @@ import { theme } from './../config';
 import { Backdrop } from './Backdrop.jsx';
 import { CardHeader } from './Card';
 import { PopUpContainer } from './PopUpContainer.jsx';
+import { Icon } from '../utils/Icon.js';
 
 // The card details container.
 // Gets displayed in the center of the screen
@@ -13,11 +14,11 @@ import { PopUpContainer } from './PopUpContainer.jsx';
 const Container = styled(PopUpContainer)`
   display: flex;
   flex-direction: column;
-  padding: ${theme.spacing.small};
   background-color: ${theme.color.primary.main};
   border-radius: ${theme.border_radius.small};
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 `;
 
 const CardHeaderWrapper = styled(CardHeader)`
@@ -28,8 +29,6 @@ const CardHeaderWrapper = styled(CardHeader)`
   h2 {
     font-size: 1.5rem;
   }
-
-  margin-bottom: 1rem;
 `;
 
 const Description = styled(motion.div).attrs({
@@ -41,11 +40,35 @@ const Description = styled(motion.div).attrs({
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 2.25rem;
+  padding: 1rem;
   text-align: center;
   line-height: 150%;
   font-family: ${theme.font.fancy};
   font-size: 1.1rem;
+  position: relative;
+  border-radius: 0.4em;
+  background-color: white;
+  margin: 0;
+  color: ${({ theme }) => theme.color.secondary};
+
+  @media (min-width: 768px) {
+    margin: 0 1rem;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 89%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+  }
 
   a {
     text-decoration: none;
@@ -54,6 +77,17 @@ const Description = styled(motion.div).attrs({
     &:hover {
       color: ${({ theme }) => theme.color.primary.dark};
     }
+  }
+`;
+
+const Image = styled.img`
+  height: ${theme.size.medium};
+  align-self: flex-end;
+  margin-top: 1rem;
+  margin-right: 0;
+
+  @media (min-width: 768px) {
+    margin-right: 2rem;
   }
 `;
 
@@ -75,8 +109,13 @@ export const CardDetails = forwardRef(
         />
         <Description>
           {description}
-          {link && <a href={link.href}>{link.text}</a>}
+          {link && (
+            <a href={link.href} target='_blank' rel='noreferrer'>
+              {link.text}
+            </a>
+          )}
         </Description>
+        <Image src={Icon['personitas']} alt={name} />
       </Container>
     </>
   )
@@ -87,7 +126,10 @@ CardDetails.propTypes = {
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
-  link: PropTypes.string,
+  link: PropTypes.shape({
+    href: PropTypes.string,
+    text: PropTypes.string,
+  }),
   onClick: PropTypes.func,
 };
 

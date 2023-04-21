@@ -6,7 +6,7 @@ import { theme } from './../config';
 // to focus on an element on the foreground (i.e. card details).
 export const Backdrop = styled(motion.div).attrs({
   initial: { opacity: 0 },
-  animate: { opacity: 0.4 },
+  animate: { opacity: 0.45 },
   exit: { opacity: 0 },
 })`
   background-color: ${theme.color.black};
