@@ -6,6 +6,7 @@ import { theme } from './../config';
 import { Backdrop } from './Backdrop.jsx';
 import { CardHeader } from './Card';
 import { PopUpContainer } from './PopUpContainer.jsx';
+import { Arrow } from './Arrow';
 import { Icon } from '../utils/Icon.js';
 
 // The card details container.
@@ -69,12 +70,29 @@ const Description = styled(motion.div).attrs({
     margin-left: -10px;
     margin-bottom: -20px;
   }
+`;
+
+const ArrowWrapper = styled(Arrow)`
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+`;
+
+const Link = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.color.secondary};
+    color: ${({ theme }) => theme.color.primary.main};
+  }
 
-    &:hover {
+  &:hover {
+    path {
+      fill: ${({ theme }) => theme.color.primary.dark};
+    }
+
+    a {
       color: ${({ theme }) => theme.color.primary.dark};
     }
   }
@@ -110,9 +128,12 @@ export const CardDetails = forwardRef(
         <Description>
           {description}
           {link && (
-            <a href={link.href} target='_blank' rel='noreferrer'>
-              {link.text}
-            </a>
+            <Link>
+              <ArrowWrapper size={14} color={theme.color.primary.main} />
+              <a href={link.href} target='_blank' rel='noreferrer'>
+                {link.text}
+              </a>
+            </Link>
           )}
         </Description>
         <Image src={Icon['personitas']} alt={name} />

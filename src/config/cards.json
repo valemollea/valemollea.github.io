@@ -47,7 +47,7 @@
     "id": 5,
     "name": "gift",
     "title": "{ regalo }",
-    "description": "En Salón Villegas, Av. San Martín 3729, Río Ceballos, Córdoba",
+    "description": "No es necesario, pero si querés, nos podes ayudar con la luna de miel :) Cualquier aporte es más que bienvenido!",
     "link": {
       "href": "https://goo.gl/maps/uCnxosiVgoQf1PkM7",
       "text": "Hace click acá para ver la ubicación"
@@ -58,7 +58,7 @@
     "id": 6,
     "name": "dress_code",
     "title": "{ facha }",
-    "description": "Idealmente elegante sport (?",
+    "description": "Idealmente más o menos elegante (?",
     "icon": "tuxedo"
   }
 ]
