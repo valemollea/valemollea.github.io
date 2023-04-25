@@ -32,11 +32,14 @@ const CardHeaderWrapper = styled(CardHeader)`
   }
 `;
 
-const Description = styled(motion.div).attrs({
+const MotionDiv = styled(motion.div).attrs({
   initial: { opacity: 0 },
   animate: { opacity: 1 },
   exit: { opacity: 0 },
-})`
+  transition: { delay: 0.2 },
+})``;
+
+const Description = styled(MotionDiv)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,7 +76,7 @@ const Description = styled(motion.div).attrs({
 `;
 
 const ArrowWrapper = styled(Arrow)`
-  margin-top: 0.5rem;
+  margin-top: 0.55rem;
   flex-shrink: 0;
 `;
 
@@ -98,14 +101,15 @@ const Link = styled.div`
   }
 `;
 
-const Image = styled.img`
+const ImageContainer = styled(MotionDiv)`
   height: ${theme.size.medium};
+  display: flex;
   align-self: flex-end;
-  margin-top: 1rem;
-  margin-right: 0;
+  margin-top: 0.5rem;
+  margin-right: 0.25rem;
 
   @media (min-width: 768px) {
-    margin-right: 2rem;
+    margin-right: 1.75rem;
   }
 `;
 
@@ -136,7 +140,9 @@ export const CardDetails = forwardRef(
             </Link>
           )}
         </Description>
-        <Image src={Icon['personitas']} alt={name} />
+        <ImageContainer>
+          <img src={Icon['personitas']} alt={name} />
+        </ImageContainer>
       </Container>
     </>
   )
