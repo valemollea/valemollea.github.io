@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/she-said-yes/static/css/main.2cea33bc.css",
-    "main.js": "/she-said-yes/static/js/main.ab13790b.js",
+    "main.js": "/she-said-yes/static/js/main.8c5a0517.js",
     "static/js/787.c1bfbb37.chunk.js": "/she-said-yes/static/js/787.c1bfbb37.chunk.js",
     "static/media/facheritos.png": "/she-said-yes/static/media/facheritos.dccd8c8c7eaf63fc6c84.png",
     "static/media/PTRegular.ttf": "/she-said-yes/static/media/PTRegular.68e86cce5b8c98f6305b.ttf",
@@ -18,11 +18,11 @@
     "static/media/car.svg": "/she-said-yes/static/media/car.f9af2dba11a337e3ddb8.svg",
     "index.html": "/she-said-yes/index.html",
     "main.2cea33bc.css.map": "/she-said-yes/static/css/main.2cea33bc.css.map",
-    "main.ab13790b.js.map": "/she-said-yes/static/js/main.ab13790b.js.map",
+    "main.8c5a0517.js.map": "/she-said-yes/static/js/main.8c5a0517.js.map",
     "787.c1bfbb37.chunk.js.map": "/she-said-yes/static/js/787.c1bfbb37.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2cea33bc.css",
-    "static/js/main.ab13790b.js"
+    "static/js/main.8c5a0517.js"
   ]
 }
