@@ -38,7 +38,7 @@ export const Header = () => (
           218.926 119.541Z'
         />
       </mask>
-      <image width='236' xlinkHref={facheritos} mask='url(#svgmask)'></image>
+      <image width='253' xlinkHref={facheritos} mask='url(#svgmask)'></image>
       <path
         stroke='#ffffff'
         strokeWidth='3'

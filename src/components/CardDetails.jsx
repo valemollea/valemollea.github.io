@@ -122,7 +122,7 @@ export const CardDetails = forwardRef(
   ({ icon, name, title, description, link, onClick, ...props }, ref) => (
     <>
       <Backdrop onClick={onClick} />
-      <Container ref={ref} {...props}>
+      <Container ref={ref} onClick={onClick} {...props}>
         <CardHeaderWrapper
           icon={icon}
           name={name}

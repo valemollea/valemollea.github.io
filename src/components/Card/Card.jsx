@@ -16,7 +16,7 @@ const Container = styled.div`
   white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: '0 0 16px 1px rgba(0,0,0,0.25), 0 2px 4px 0 rgba(0,0,0,0.1)';
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.25), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 `;
 
 /**
