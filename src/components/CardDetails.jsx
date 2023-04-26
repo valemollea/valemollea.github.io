@@ -84,6 +84,7 @@ const Link = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 0.35rem;
+  padding-right: 1.25rem;
 
   a {
     text-decoration: none;

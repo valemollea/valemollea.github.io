@@ -6,6 +6,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     color: ${({ theme }) => theme.color.white};
     font-family: ${({ theme }) => theme.font.nerd};
-    background-color: ${({ theme }) => theme.color.secondary};
+    background: ${({ theme }) => theme.color.background};
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 `;

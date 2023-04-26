@@ -11,6 +11,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
 `;
 
 // The main page content container.
