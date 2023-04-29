@@ -16,8 +16,9 @@
     "nerd": "SourceCodePro"
   },
   "font_size": {
-    "small": "clamp(0.9em, 2vw, 1.2em)",
-    "large": "clamp(1rem, 5vw, 3rem)"
+    "small": "clamp(1em, 2vw, 1.2em)",
+    "medium": "clamp(1.2em, 3vw, 1.5em)",
+    "large": "clamp(1.5rem, 5vw, 3rem)"
   },
   "spacing": {
     "none": "0",

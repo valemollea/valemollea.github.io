@@ -28,7 +28,7 @@ const CardHeaderWrapper = styled(CardHeader)`
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: ${theme.font_size.medium};
   }
 `;
 
@@ -48,7 +48,7 @@ const Description = styled(MotionDiv)`
   text-align: center;
   line-height: 150%;
   font-family: ${theme.font.fancy};
-  font-size: 1.1rem;
+  font-size: ${theme.font_size.small};
   position: relative;
   border-radius: 0.4em;
   background-color: white;
