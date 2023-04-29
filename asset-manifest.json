@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/she-said-yes/static/css/main.2cea33bc.css",
-    "main.js": "/she-said-yes/static/js/main.ab93c5e1.js",
+    "main.js": "/she-said-yes/static/js/main.b2db8734.js",
     "static/js/787.c1bfbb37.chunk.js": "/she-said-yes/static/js/787.c1bfbb37.chunk.js",
     "static/media/facheritos.png": "/she-said-yes/static/media/facheritos.dccd8c8c7eaf63fc6c84.png",
     "static/media/PTRegular.ttf": "/she-said-yes/static/media/PTRegular.68e86cce5b8c98f6305b.ttf",
@@ -16,13 +16,14 @@
     "static/media/confirm.svg": "/she-said-yes/static/media/confirm.b20014eef4bb401911d1.svg",
     "static/media/location.svg": "/she-said-yes/static/media/location.f405d250e40800c3cdc0.svg",
     "static/media/car.svg": "/she-said-yes/static/media/car.f9af2dba11a337e3ddb8.svg",
+    "static/media/heart.svg": "/she-said-yes/static/media/heart.c53a5856d47b7aee3ca0.svg",
     "index.html": "/she-said-yes/index.html",
     "main.2cea33bc.css.map": "/she-said-yes/static/css/main.2cea33bc.css.map",
-    "main.ab93c5e1.js.map": "/she-said-yes/static/js/main.ab93c5e1.js.map",
+    "main.b2db8734.js.map": "/she-said-yes/static/js/main.b2db8734.js.map",
     "787.c1bfbb37.chunk.js.map": "/she-said-yes/static/js/787.c1bfbb37.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2cea33bc.css",
-    "static/js/main.ab93c5e1.js"
+    "static/js/main.b2db8734.js"
   ]
 }
