@@ -7,9 +7,7 @@
 
 # TODO
 
-- [] Confirmation Link
-- [] Create Google Form for confirmation
-- [] Create Spotify Playlist
+- [] Complete confirmation Google Form
 - [] Add Calendar link to the `Cuándo` section
-- [] Remove `Regalo` section
-
+- [] Fix typos
+- [] Complete `Traslado` section
