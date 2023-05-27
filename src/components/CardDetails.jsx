@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, useState } from 'react';
 import { PropTypes } from 'prop-types';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
@@ -80,7 +80,7 @@ const ArrowWrapper = styled(Arrow)`
   flex-shrink: 0;
 `;
 
-const Link = styled.div`
+const LinkContainer = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 0.35rem;
@@ -92,6 +92,8 @@ const Link = styled.div`
   }
 
   &:hover {
+    color: ${({ theme }) => theme.color.primary.dark};
+
     path {
       fill: ${({ theme }) => theme.color.primary.dark};
     }
@@ -123,40 +125,89 @@ const CloseButton = styled.img`
   cursor: pointer;
 `;
 
+const CopyContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding-right: 1.25rem;
+  color: ${({ theme }) => theme.color.primary.main};
+
+  &:hover {
+    color: ${({ theme }) => theme.color.primary.dark};
+
+    button {
+      background-color: ${({ theme }) => theme.color.primary.dark};
+    }
+  }
+
+  button {
+    font-family: ${theme.font.fancy};
+    color: white;
+    background-color: ${({ theme }) => theme.color.primary.main};
+    width: fit-content;
+    border: none;
+    outline: none;
+    border-radius: ${theme.border_radius.small};
+    align-self: end;
+    cursor: pointer;
+  }
+`;
+
 /**
  * Card Details Component.
  * Displays `all` information of an info card.
  * Meant to be displayed when a card is selected from the grid.
  */
 export const CardDetails = forwardRef(
-  ({ icon, name, title, description, link, onClick, ...props }, ref) => (
-    <>
-      <Backdrop onClick={onClick} />
-      <Container ref={ref} onClick={onClick} {...props}>
-        <CloseButton src={Icon['close']} alt={name} />
-        <CardHeaderWrapper
-          icon={icon}
-          name={name}
-          title={title}
-          style={{ transform: 'scale(1.5)', marginBottom: '1rem' }}
-        />
-        <Description>
-          {description}
-          {link && (
-            <Link>
-              <ArrowWrapper size={14} color={theme.color.primary.main} />
-              <a href={link.href} target='_blank' rel='noreferrer'>
-                {link.text}
-              </a>
-            </Link>
-          )}
-        </Description>
-        <ImageContainer>
-          <img src={Icon['personitas']} alt={name} />
-        </ImageContainer>
-      </Container>
-    </>
-  )
+  (
+    { icon, name, title, description, link, copyButton, onClick, ...props },
+    ref
+  ) => {
+    const [copiedText, setCopiedText] = useState(false);
+
+    return (
+      <>
+        <Backdrop onClick={onClick} />
+        <Container ref={ref} onClick={onClick} {...props}>
+          <CloseButton src={Icon['close']} alt={name} />
+          <CardHeaderWrapper
+            icon={icon}
+            name={name}
+            title={title}
+            style={{ transform: 'scale(1.5)', marginBottom: '1rem' }}
+          />
+          <Description>
+            {description}
+            {link && (
+              <LinkContainer>
+                <ArrowWrapper size={14} color={theme.color.primary.main} />
+                <a href={link.href} target='_blank' rel='noreferrer'>
+                  {link.text}
+                </a>
+              </LinkContainer>
+            )}
+            {copyButton && (
+              <CopyContent
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  navigator.clipboard.writeText(copyButton.textToCopy);
+                  setCopiedText(true);
+                }}
+              >
+                {copyButton.description}
+                <button>{!copiedText ? copyButton.label : 'Copiado!'}</button>
+              </CopyContent>
+            )}
+          </Description>
+          <ImageContainer>
+            <img src={Icon['personitas']} alt={name} />
+          </ImageContainer>
+        </Container>
+      </>
+    );
+  }
 );
 
 CardDetails.propTypes = {
@@ -168,11 +219,17 @@ CardDetails.propTypes = {
     href: PropTypes.string,
     text: PropTypes.string,
   }),
+  copyButton: PropTypes.shape({
+    description: PropTypes.string,
+    label: PropTypes.string,
+    textToCopy: PropTypes.string,
+  }),
   onClick: PropTypes.func,
 };
 
 CardDetails.defaultProps = {
   description: '',
   link: null,
+  copyButton: null,
   onClick: () => {},
 };

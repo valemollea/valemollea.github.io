@@ -43,7 +43,7 @@ export const CardGroup = () => {
         ))}
         {selected && (
           <MotionCardDetails
-            key={selected.name}
+            key={`${selected.name}-details`}
             layoutId={selected.id}
             onClick={() => setSelected(null)}
             {...selected}

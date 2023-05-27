@@ -47,8 +47,13 @@
     "id": 5,
     "name": "gift",
     "title": "{ regalo }",
-    "description": "No es necesario, pero si querés, nos podes ayudar con la luna de miel :)\n CBU: 0070076430004049980355\n Alias: valerita.mollea",
-    "icon": "gift"
+    "description": "No es necesario, pero si querés, nos podes ayudar con la luna de miel :)",
+    "icon": "gift",
+    "copyButton": {
+      "description": "CBU: 0070076430004049980355\n Alias: valerita.mollea",
+      "label": "Copiar CBU",
+      "textToCopy": "0070076430004049980355"
+    }
   },
   {
     "id": 6,
