@@ -114,6 +114,15 @@ const ImageContainer = styled(MotionDiv)`
   }
 `;
 
+// The close button of the card item.
+const CloseButton = styled.img`
+  height: 2rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+`;
+
 /**
  * Card Details Component.
  * Displays `all` information of an info card.
@@ -124,6 +133,7 @@ export const CardDetails = forwardRef(
     <>
       <Backdrop onClick={onClick} />
       <Container ref={ref} onClick={onClick} {...props}>
+        <CloseButton src={Icon['close']} alt={name} />
         <CardHeaderWrapper
           icon={icon}
           name={name}
