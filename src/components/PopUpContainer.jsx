@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, useEffect } from 'react';
 import { PropTypes } from 'prop-types';
 import styled from 'styled-components';
 import { theme } from './../config';
@@ -25,12 +25,22 @@ const CloseButton = styled.img`
   cursor: pointer;
 `;
 
-export const PopUpContainer = forwardRef(({ children, ...props }, ref) => (
-  <Container ref={ref} {...props}>
-    <CloseButton src={Icon['close']} alt='close' />
-    {children}
-  </Container>
-));
+export const PopUpContainer = forwardRef(({ children, ...props }, ref) => {
+  useEffect(() => {
+    // Prevent scrolling when the pop up is open.
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
+
+  return (
+    <Container ref={ref} {...props}>
+      <CloseButton src={Icon['close']} alt='close' />
+      {children}
+    </Container>
+  );
+});
 
 PopUpContainer.propTypes = {
   children: PropTypes.node.isRequired,
