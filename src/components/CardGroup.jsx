@@ -66,6 +66,7 @@ export const CardGroup = () => {
         )}
         {selectedForm && (
           <MotionForm
+            key='form'
             iframeSrc={selectedForm}
             onClick={() => {
               setSelectedForm(null);

@@ -29,10 +29,13 @@ export const PopUpContainer = forwardRef(({ children, ...props }, ref) => {
   useEffect(() => {
     // Prevent scrolling when the pop up is open.
     document.body.style.overflow = 'hidden';
+    document.body.style.height = '100vh';
+
     return () => {
       document.body.style.overflow = 'unset';
+      document.body.style.height = 'auto';
     };
-  }, []);
+  }, [children]);
 
   return (
     <Container ref={ref} {...props}>
