@@ -2,10 +2,10 @@ import { useState, useEffect, forwardRef, useRef } from 'react';
 import { PropTypes } from 'prop-types';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { theme } from '../../config';
-import { Backdrop } from '../Backdrop.jsx';
-import { PopUpContainer } from '../PopUpContainer.jsx';
-import { Spinner } from '../Spinner.jsx';
+import { theme } from '../config';
+import { Backdrop } from './Backdrop.jsx';
+import { PopUpContainer } from './PopUpContainer.jsx';
+import { Spinner } from './Spinner.jsx';
 
 // The card details container.
 // Gets displayed in the center of the screen
@@ -22,7 +22,7 @@ const Container = styled(PopUpContainer)`
   height: auto;
   max-height: calc(100% - 96px);
   margin: 3rem auto;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem 1.5rem;
 
   iframe {
     background-color: transparent;
@@ -42,7 +42,7 @@ const MotionDiv = styled(motion.div).attrs({
  * Confirmation Form Component.
  * Meant to be displayed when a Confirmation Button is clicked.
  */
-export const ConfirmationForm = forwardRef(({ onClick, ...props }, ref) => {
+export const Form = forwardRef(({ onClick, iframeSrc, ...props }, ref) => {
   const containerRef = useRef(ref);
   const [dimensions, setDimensions] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -51,7 +51,7 @@ export const ConfirmationForm = forwardRef(({ onClick, ...props }, ref) => {
     if (containerRef?.current?.offsetHeight) {
       setDimensions({
         height: containerRef?.current?.offsetHeight - 64,
-        width: containerRef?.current?.offsetWidth - 32,
+        width: containerRef?.current?.offsetWidth - 8,
       });
     }
   }, [containerRef]);
@@ -63,9 +63,14 @@ export const ConfirmationForm = forwardRef(({ onClick, ...props }, ref) => {
         {dimensions && (
           <MotionDiv>
             <iframe
-              src='https://docs.google.com/forms/d/e/1FAIpQLSfJk2XoMgDcdISrZ1LjdnG_RTccLXtLjTfVWSEs3_tCsq7JnA/viewform?embedded=true'
+              src={iframeSrc}
               width={dimensions.width}
               height={dimensions.height}
+              style={{
+                frameBorder: '0',
+                marginHeight: '0',
+                marginWidth: '0',
+              }}
               onLoad={() => setIsLoading(false)}
             >
               Cargando…
@@ -78,10 +83,11 @@ export const ConfirmationForm = forwardRef(({ onClick, ...props }, ref) => {
   );
 });
 
-ConfirmationForm.propTypes = {
+Form.propTypes = {
+  iframeSrc: PropTypes.string.isRequired,
   onClick: PropTypes.func,
 };
 
-ConfirmationForm.defaultProps = {
+Form.defaultProps = {
   onClick: () => {},
 };

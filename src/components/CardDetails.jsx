@@ -7,6 +7,7 @@ import { Backdrop } from './Backdrop.jsx';
 import { CardHeader } from './Card';
 import { PopUpContainer } from './PopUpContainer.jsx';
 import { Arrow } from './Arrow';
+import { Button } from './Button.jsx';
 import { Icon } from '../utils/Icon.js';
 
 // The card details container.
@@ -47,8 +48,8 @@ const Description = styled(MotionDiv)`
   padding: 1rem;
   text-align: center;
   line-height: 150%;
-  font-family: ${theme.font.fancy};
-  font-size: ${theme.font_size.small};
+  font-family: ${({ theme }) => theme.font.fancy};
+  font-size: ${({ theme }) => theme.font_size.small};
   position: relative;
   border-radius: 0.4em;
   background-color: white;
@@ -105,7 +106,7 @@ const LinkContainer = styled.div`
 `;
 
 const ImageContainer = styled(MotionDiv)`
-  height: ${theme.size.medium};
+  height: ${({ theme }) => theme.size.medium};
   display: flex;
   align-self: flex-end;
   margin-top: 0.5rem;
@@ -114,15 +115,6 @@ const ImageContainer = styled(MotionDiv)`
   @media (min-width: 768px) {
     margin-right: 1.75rem;
   }
-`;
-
-// The close button of the card item.
-const CloseButton = styled.img`
-  height: 2rem;
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  cursor: pointer;
 `;
 
 const CopyContent = styled.div`
@@ -140,18 +132,6 @@ const CopyContent = styled.div`
       background-color: ${({ theme }) => theme.color.primary.dark};
     }
   }
-
-  button {
-    font-family: ${theme.font.fancy};
-    color: white;
-    background-color: ${({ theme }) => theme.color.primary.main};
-    width: fit-content;
-    border: none;
-    outline: none;
-    border-radius: ${theme.border_radius.small};
-    align-self: end;
-    cursor: pointer;
-  }
 `;
 
 /**
@@ -161,16 +141,27 @@ const CopyContent = styled.div`
  */
 export const CardDetails = forwardRef(
   (
-    { icon, name, title, description, link, copyButton, onClick, ...props },
+    {
+      icon,
+      name,
+      title,
+      description,
+      link,
+      copyButton,
+      conditionalIframe,
+      onClick,
+      onOpenForm,
+      ...props
+    },
     ref
   ) => {
+    // state for the copy button
     const [copiedText, setCopiedText] = useState(false);
 
     return (
       <>
         <Backdrop onClick={onClick} />
         <Container ref={ref} onClick={onClick} {...props}>
-          <CloseButton src={Icon['close']} alt={name} />
           <CardHeaderWrapper
             icon={icon}
             name={name}
@@ -197,8 +188,19 @@ export const CardDetails = forwardRef(
                 }}
               >
                 {copyButton.description}
-                <button>{!copiedText ? copyButton.label : 'Copiado!'}</button>
+                <Button>{!copiedText ? copyButton.label : 'Copiado!'}</Button>
               </CopyContent>
+            )}
+            {conditionalIframe && (
+              <Button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  onOpenForm(conditionalIframe.src);
+                }}
+              >
+                {conditionalIframe.buttonLabel}
+              </Button>
             )}
           </Description>
           <ImageContainer>
@@ -224,12 +226,19 @@ CardDetails.propTypes = {
     label: PropTypes.string,
     textToCopy: PropTypes.string,
   }),
+  conditionalIframe: PropTypes.shape({
+    src: PropTypes.string,
+    buttonLabel: PropTypes.string,
+  }),
   onClick: PropTypes.func,
+  onOpenForm: PropTypes.func,
 };
 
 CardDetails.defaultProps = {
   description: '',
   link: null,
   copyButton: null,
+  conditionalIframe: null,
   onClick: () => {},
+  onOpenForm: () => {},
 };

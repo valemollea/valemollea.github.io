@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from './Card';
 import { CardDetails } from './CardDetails';
+import { Form } from './Form';
 import { cards, theme } from './../config';
 
 // Card group container.
@@ -21,6 +22,11 @@ const MotionCard = motion(Card, { forwardMotionProps: true });
 // Forwards `motion` functionality to the card detail component.
 const MotionCardDetails = motion(CardDetails, { forwardMotionProps: true });
 
+// Forwards `motion` functionality to the form component.
+const MotionForm = motion(Form, {
+  forwardMotionProps: true,
+});
+
 /**
  * Card Group Component.
  * Displays the list of cards in a grid manner to
@@ -29,7 +35,15 @@ const MotionCardDetails = motion(CardDetails, { forwardMotionProps: true });
  */
 export const CardGroup = () => {
   const [selected, setSelected] = useState(null);
+  const [selectedForm, setSelectedForm] = useState(null);
 
+  const onOpenForm = useCallback(
+    (formSrc) => {
+      setSelectedForm(formSrc);
+      setSelected(null);
+    },
+    [selectedForm, setSelected]
+  );
   return (
     <Container>
       <AnimatePresence>
@@ -46,7 +60,16 @@ export const CardGroup = () => {
             key={`${selected.name}-details`}
             layoutId={selected.id}
             onClick={() => setSelected(null)}
+            onOpenForm={onOpenForm}
             {...selected}
+          />
+        )}
+        {selectedForm && (
+          <MotionForm
+            iframeSrc={selectedForm}
+            onClick={() => {
+              setSelectedForm(null);
+            }}
           />
         )}
       </AnimatePresence>

@@ -25,10 +25,10 @@
     "id": 3,
     "name": "transport",
     "title": "{ traslado }",
-    "description": "En Salón Villegas, Av. San Martín 3729, Río Ceballos, Córdoba",
-    "link": {
-      "href": "https://goo.gl/maps/uCnxosiVgoQf1PkM7",
-      "text": "Hace click acá para ver la ubicación"
+    "description": "Si tenes ganas de olvidarte de los traslados, tenemos una buena noticia! Van a salir algunas trafics o colectivos desde ciertos puntos de Córdoba. Si te interesa, por favor completá el siguiente formulario.",
+    "conditionalIframe": {
+      "src": "https://docs.google.com/forms/d/e/1FAIpQLSdBPypHa4FZXxx5vXt46-LN8CJRtA3eXesPCbHrZ-_BmiqvsQ/viewform?embedded=true",
+      "buttonLabel": "Completar formulario"
     },
     "icon": "car"
   },

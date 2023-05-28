@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ConfirmationButton } from './ConfirmationButton';
-import { ConfirmationForm } from './ConfirmationForm';
+import { Form } from '../Form';
 
 // Forwards `motion` functionality to the card detail component.
-const MotionConfirmationForm = motion(ConfirmationForm, {
+const MotionConfirmationForm = motion(Form, {
   forwardMotionProps: true,
 });
 
@@ -20,6 +20,7 @@ export const Confirmation = () => {
       {openForm && (
         <MotionConfirmationForm
           key='confirmation-form'
+          iframeSrc='https://docs.google.com/forms/d/e/1FAIpQLSfJk2XoMgDcdISrZ1LjdnG_RTccLXtLjTfVWSEs3_tCsq7JnA/viewform?embedded=true'
           onClick={() => setOpenForm(false)}
         />
       )}
