@@ -17,7 +17,7 @@
     "description": "En Salón Villegas, Av. San Martín 3729, Río Ceballos, Córdoba",
     "link": {
       "href": "https://goo.gl/maps/uCnxosiVgoQf1PkM7",
-      "text": "Hace click acá para ver la ubicación"
+      "text": "Hacé click acá para ver la ubicación"
     },
     "icon": "location"
   },
@@ -25,7 +25,7 @@
     "id": 3,
     "name": "transport",
     "title": "{ traslado }",
-    "description": "Si tenes ganas de olvidarte de los traslados, tenemos una buena noticia! Van a salir algunas trafics o colectivos desde ciertos puntos de Córdoba. Si te interesa, por favor completá el siguiente formulario.",
+    "description": "Si tenés ganas de olvidarte de los traslados, tenemos una buena noticia! Van a salir algunos colectivos desde ciertos puntos de Córdoba. Si te interesa, por favor completá el siguiente formulario.",
     "conditionalIframe": {
       "src": "https://docs.google.com/forms/d/e/1FAIpQLSdBPypHa4FZXxx5vXt46-LN8CJRtA3eXesPCbHrZ-_BmiqvsQ/viewform?embedded=true",
       "buttonLabel": "Completar formulario"
@@ -36,10 +36,10 @@
     "id": 4,
     "name": "music",
     "title": "{ música }",
-    "description": "Queremos que bailes toda la noche! por eso la música es muy importante.",
+    "description": "Queremos que bailes toda la noche!",
     "link": {
       "href": "https://music.youtube.com/playlist?list=PLStPar22ClQspU5pXOJurP2N20BMReh3q&jct=7UPDNm1sRzw0hxRgiporzS0QUb-n-g",
-      "text": "Agrega las canciones que no pueden faltar!"
+      "text": "Agregá las canciones que no pueden faltar!"
     },
     "icon": "vinyl"
   },
@@ -59,7 +59,7 @@
     "id": 6,
     "name": "dress_code",
     "title": "{ facha }",
-    "description": "Idealmente más o menos elegante (?",
+    "description": "La idea es que vengas formal y l-gante.",
     "icon": "tuxedo"
   }
 ]
