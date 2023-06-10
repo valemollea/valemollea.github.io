@@ -2,7 +2,7 @@
   "name": "she-said-yes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rusito-23.github.com/she-said-yes",
+  "homepage": "https://valemollea.github.com/",
   "scripts": {
     "prepare": "husky install",
     "precommit": "precise-commits",
