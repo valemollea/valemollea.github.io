@@ -123,6 +123,7 @@ const CopyContent = styled.div`
   align-items: center;
   gap: 0.35rem;
   padding-right: 1.25rem;
+  white-space: break-spaces;
   color: ${({ theme }) => theme.color.primary.main};
 
   &:hover {
