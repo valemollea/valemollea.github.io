@@ -11,6 +11,9 @@ const MotionConfirmationForm = motion(Form, {
 export const Confirmation = () => {
   const [openForm, setOpenForm] = useState(null);
 
+  const searchParams = new URLSearchParams(document.location.search);
+  const mode = searchParams.get('mode');
+
   return (
     <AnimatePresence>
       <ConfirmationButton
@@ -20,7 +23,11 @@ export const Confirmation = () => {
       {openForm && (
         <MotionConfirmationForm
           key='confirmation-form'
-          iframeSrc='https://docs.google.com/forms/d/e/1FAIpQLSfJk2XoMgDcdISrZ1LjdnG_RTccLXtLjTfVWSEs3_tCsq7JnA/viewform?embedded=true'
+          iframeSrc={
+            mode === 'ar'
+              ? 'https://docs.google.com/forms/d/e/1FAIpQLScf38fmwtpChsDBRrvqi-QASLsPuLLXee9XlsV8ATecb4Briw/viewform?embedded=true'
+              : 'https://docs.google.com/forms/d/e/1FAIpQLSfJk2XoMgDcdISrZ1LjdnG_RTccLXtLjTfVWSEs3_tCsq7JnA/viewform?embedded=true'
+          }
           onClick={() => setOpenForm(false)}
         />
       )}
