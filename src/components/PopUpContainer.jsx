@@ -28,10 +28,13 @@ const CloseButton = styled.img`
 export const PopUpContainer = forwardRef(({ children, ...props }, ref) => {
   useEffect(() => {
     // Prevent scrolling when the pop up is open.
-    document.body.style.position = 'fixed';
+    const scrollHeight = window?.scrollY;
+    console.log(scrollHeight);
+    document.body.style.top = `-${scrollHeight}px`;
 
     return () => {
-      document.body.style.position = '';
+      document.body.style.top = '0px';
+      window.scrollTo(0, scrollHeight);
     };
   }, [children]);
 

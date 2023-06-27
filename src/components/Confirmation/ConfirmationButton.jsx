@@ -1,5 +1,5 @@
 import { content } from '../../config';
-import { Card } from '../Card/Card.jsx';
+import { Card } from '../Card/Card';
 import { motion } from 'framer-motion';
 
 /**

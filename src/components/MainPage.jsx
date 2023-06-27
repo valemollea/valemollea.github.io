@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Header } from './Header.jsx';
-import { CardGroup } from './CardGroup.jsx';
+import { Header } from './Header';
+import { CardGroup } from './CardGroup';
 import { Confirmation } from './Confirmation';
 import { theme } from '../config';
 
