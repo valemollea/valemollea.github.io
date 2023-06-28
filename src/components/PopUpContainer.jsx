@@ -29,7 +29,6 @@ export const PopUpContainer = forwardRef(({ children, ...props }, ref) => {
   useEffect(() => {
     // Prevent scrolling when the pop up is open.
     const scrollHeight = window?.scrollY;
-    console.log(scrollHeight);
     document.body.style.top = `-${scrollHeight}px`;
 
     return () => {
